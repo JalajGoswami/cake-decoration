@@ -1,0 +1,15 @@
+#footer{
+    background-color: black;
+    color: azure;
+    padding: 1% 0%;
+    margin-top: 2%;
+}
+#footer a{
+    color: lightskyblue;
+}
+@media screen and (max-width:750px){
+    #footer{margin-bottom: -3%;}
+}
+@media screen and (max-width:550px){
+    #footer{margin-bottom: -4%;}
+}
