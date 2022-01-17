@@ -5,6 +5,7 @@ class CakeSize extends Component {
     render() {
         return (
             <div id="sizebtns">
+                <h2>Cake Size</h2>
                 <input type="button" value="6" onClick={this.props.sizeHandler} />
                 <input type="button" value="8" onClick={this.props.sizeHandler} />
                 <input type="button" value="9" onClick={this.props.sizeHandler} />

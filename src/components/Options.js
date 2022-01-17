@@ -18,7 +18,6 @@ class Options extends Component {
                  onChange={(e)=>remHandler(e,item)}>
                     {optionItems}
                 </select>
-                {console.log(currentValue,item)}
             </>
         )
     }

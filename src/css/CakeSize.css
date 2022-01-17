@@ -1,6 +1,6 @@
 #sizebtns{
     width: 100%;
-    
+    margin-top: 2%;
 }
 #sizebtns input{
     width: 8rem;
@@ -11,6 +11,10 @@
     background-image: linear-gradient(135deg,rgb(228, 247, 253),rgb(192, 237, 255));
     font-size: 1.1rem;
     transition: 0.3s;
+}
+#sizebtns h2{
+    display: inline;
+    margin-right: 4%;
 }
 #sizebtns input:hover{
     box-shadow: 2px 6px 5px rgba(135, 207, 235, 0.719);

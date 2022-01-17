@@ -13,7 +13,7 @@ class Decorations extends Component {
         }
     }
     static getDerivedStateFromProps(props,state){
-        if(props.max>(state.remaining+state.currentValues.reduce((a, b) => a + b, 0)))
+        if(props.max!=(state.remaining+state.currentValues.reduce((a, b) => a + b, 0)))
             return { remaining : props.max-state.currentValues.reduce((a, b) => a + b, 0)}
     }
     prevHandler = (e)=>{
@@ -61,7 +61,6 @@ class Decorations extends Component {
                     prevHandler={this.prevHandler} remHandler={this.remHandler}/>
                     </div>
                 </form>
-                {console.log(this.state)}
             </div>
         )
     }
