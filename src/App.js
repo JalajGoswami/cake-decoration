@@ -12,8 +12,8 @@ class App extends Component {
        max : 6
     }
   }
-  sizeHandler = (e)=>{
-    this.setState({max : parseInt(e.target.value)})
+  sizeHandler = (v)=>{
+    this.setState({max : parseInt(v)})
   }
   render() {
     return (
@@ -23,12 +23,20 @@ class App extends Component {
         </div>
         <div className="container">
         <div className="col1">
-          <img src="https://yomacakeybakey.web.app/static/media/RicottaCheesecake04_detailPg_zoom_desktop.b5025dbc.png"/>
+          <img src="https://yomacakeybakey.web.app/static/media/RicottaCheesecake04_detailPg_zoom_desktop.b5025dbc.png" alt='Cake'/>
         </div>
-        <div className="col2">
-          <CakeSize sizeHandler={this.sizeHandler}/>
+          <CakeSize sizeHandler={this.sizeHandler} max={this.state.max}/>
           <Decorations max={this.state.max} />
         </div>
+        <div className='descrip'><h2>Description</h2>
+          The maximum decoration items that can be placed
+          on top of the cake depends upon the Cake Size selected
+          by the User. Once the cake size is selected, user is shown item count options 
+          such that he can select decoratable items adding 
+          (i.e. the sum of individual items) only upto the CakeSize limit.<br/>
+          With the help of <b>States and Props</b> the user can continuously change his
+          choices for the count of different itmes and the WebApp will synchronously change
+          the options for all items according to the latest choice.
         </div>
         <Footer />
       </div>

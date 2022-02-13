@@ -6,15 +6,16 @@ import '../css/Decorations.css'
 class Decorations extends Component {
     constructor(props) {
         super(props)
-        let prevValue=0
         this.state = {
             remaining : this.props.max,
             currentValues : [0,0,0,0]
         }
     }
+    prevValue=0
     static getDerivedStateFromProps(props,state){
-        if(props.max!=(state.remaining+state.currentValues.reduce((a, b) => a + b, 0)))
+        if(props.max!==(state.remaining+state.currentValues.reduce((a, b) => a + b, 0)))
             return { remaining : props.max-state.currentValues.reduce((a, b) => a + b, 0)}
+        else return state
     }
     prevHandler = (e)=>{
         this.prevValue = parseInt(e.target.value)

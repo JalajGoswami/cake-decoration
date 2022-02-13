@@ -10,7 +10,7 @@ class Options extends Component {
         let optionItems = []
         let num = count+currentValue
         for(let i=0;i<=num;i++)
-            optionItems.push(<option value={i}>{i}</option>)
+            optionItems.push(<option key={i} value={i}>{i}</option>)
 
         return (
             <>
